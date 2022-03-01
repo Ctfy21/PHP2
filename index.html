@@ -11,12 +11,22 @@
         <img src="img/1.png" width="300" height="200" alt="logo">
         <p style="text-align: center;vertical-align: middle;">"Feedback Form"</p>
     </header>
-    <main>
-        <form style="margin: 10px;" action="https://httpbin.org/post" method="post">
+    <main style="display: inline;">
+        <form style="margin-bottom: 50px;" action="https://httpbin.org/post" method="post">
             <label for="name">Введите имя:</label>
             <input type="text" name="name">
             <label for="email">Введите email:</label>
             <input type="email" name="email">
+            <select name="selectOption">
+                <option value="Жалоба">Жалоба</option>
+                <option value="Предложение">Предложение</option>
+                <option value="Благодарность">Благодарность</option>
+            </select>
+            <textarea name="appealText" id="1" cols="30" rows="10"></textarea>
+            <div style="display: flex; align-items: center;"> 
+            <p>Отправить СМС</p>
+            <input type="checkbox" name="checkSMS" id="123">
+            </div>
             <button type="submit">Отправить</button>
         </form>
         <a href="/headers.php">
